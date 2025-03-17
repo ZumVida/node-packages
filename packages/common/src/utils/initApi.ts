@@ -1,8 +1,8 @@
-import { defaultTokenHandler } from '@/utils/tokenHandler'
 import axios from 'axios'
 import { useErrorHandler, useHeadersInterceptor } from './interceptors'
-import type { TokenHandler } from '@/utils/tokenHandler'
+import { defaultTokenHandler } from './tokenHandler'
 import type { ErrorHandlerParams } from './interceptors'
+import type { TokenHandler } from './tokenHandler'
 
 /**
  * initApi

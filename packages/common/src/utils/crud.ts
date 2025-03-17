@@ -1,4 +1,4 @@
-import type { IApiWrapper, IPaginatedData, IPaginationParams } from '@/types'
+import type { IApiWrapper, IPaginatedData, IPaginationParams } from '@zumvida/common/types'
 import type { AxiosInstance } from 'axios'
 
 const multipartHeader = {
