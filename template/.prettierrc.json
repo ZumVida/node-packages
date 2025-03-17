@@ -6,12 +6,9 @@
   "printWidth": 100,
   "trailingComma": "none",
   "plugins": [
-    "prettier-plugin-tailwindcss",
-    "@ianvs/prettier-plugin-sort-imports",
-    "prettier-plugin-organize-attributes"
+    "@ianvs/prettier-plugin-sort-imports"
   ],
   "importOrder": [
-    "^vue$",
     "<BUILTIN_MODULES>",
     "<THIRD_PARTY_MODULES>",
     "^[.]",
@@ -19,7 +16,10 @@
     "<TYPES>",
     "<TYPES>^[.]"
   ],
-  "importOrderParserPlugins": ["typescript", "vue", "decorators-legacy"],
+  "importOrderParserPlugins": [
+    "typescript",
+    "decorators-legacy"
+  ],
   "importOrderTypeScriptVersion": "5.5.4",
   "importOrderCaseSensitive": true
 }
