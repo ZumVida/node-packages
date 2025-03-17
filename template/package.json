@@ -1,0 +1,28 @@
+{
+  "name": "@zumvida/common",
+  "version": "0.0.1",
+  "description": "Zumvida common package",
+  "main": "./dist/main.js",
+  "module": "./dist/main.mjs",
+  "types": "./dist/main.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "zumvida",
+    "service"
+  ],
+  "author": "adriancapote95@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint ./src --ext .ts",
+    "lint:fix": "eslint ./src --ext .ts --fix",
+    "format": "prettier --write \"./src/**/*.ts\""
+  },
+  "engines": {
+    "node": "^20",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}
