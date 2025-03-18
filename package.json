@@ -1,7 +1,7 @@
 {
-  "name": "@zumvida/common",
+  "name": "@zumvida/node",
   "version": "0.0.1",
-  "description": "Zumvida common package",
+  "description": "Zumvida node package",
   "main": "./dist/main.js",
   "module": "./dist/main.mjs",
   "types": "./dist/main.d.ts",

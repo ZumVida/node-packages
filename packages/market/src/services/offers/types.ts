@@ -1,17 +1,16 @@
 export interface IMarketOffer {
   id: string
+  is_available: boolean
   name: string
-  image: string
-  description: string | null
-  small_description: string | null
-  price: number
-  metadata: IMarketOfferMetadata
+  description?: string | undefined
   stock: IMarketOfferStock
+  price: IMarketOfferPrices
+  rating?: number
 }
 
 export interface IMarketOfferExtended extends IMarketOffer {
-  prices: IMarketOfferPrices
   gallery: string[] | null
+  meta: IMarketOfferMetadata | null
 }
 
 export interface IMarketOfferMetadata {
@@ -24,9 +23,9 @@ export interface IMarketOfferStock {
 }
 
 export enum MarketOfferStockType {
-  Infinite = 'infinite',
-  Limited = 'limited',
-  Out = 'out'
+  Limited = 'in-stock',
+  Out = 'out-stock',
+  Income = 'income'
 }
 
 export interface IMarketOfferPrices {
