@@ -22,7 +22,7 @@
     "moduleResolution": "Node",
     "baseUrl": ".",
     "paths": {
-      "@zumvida/common/*": [
+      "@zumvida/booking/*": [
         "src/*"
       ]
     }

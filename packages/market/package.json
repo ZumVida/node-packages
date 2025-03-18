@@ -1,7 +1,7 @@
 {
-  "name": "@zumvida/common",
+  "name": "@zumvida/market",
   "version": "0.0.1",
-  "description": "Zumvida common package",
+  "description": "Zumvida market package",
   "main": "./dist/main.js",
   "module": "./dist/main.mjs",
   "types": "./dist/main.d.ts",
@@ -20,6 +20,9 @@
     "lint": "eslint ./src --ext .ts",
     "lint:fix": "eslint ./src --ext .ts --fix",
     "format": "prettier --write \"./src/**/*.ts\""
+  },
+  "devDependencies": {
+    "@zumvida/common": "workspace:^"
   },
   "engines": {
     "node": "^20"

@@ -49,6 +49,12 @@ importers:
         specifier: ^8.26.1
         version: 8.26.1(eslint@9.22.0)(typescript@5.8.2)
 
+  packages/booking:
+    dependencies:
+      '@zumvida/common':
+        specifier: workspace:^
+        version: link:../common
+
   packages/common: {}
 
 packages:
