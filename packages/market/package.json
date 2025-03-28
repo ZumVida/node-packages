@@ -22,6 +22,7 @@
     "format": "prettier --write \"./src/**/*.ts\""
   },
   "devDependencies": {
+    "@zumvida/billing": "workspace:^",
     "@zumvida/common": "workspace:^"
   },
   "engines": {

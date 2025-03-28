@@ -1,34 +1,35 @@
-export interface IMarketOffer {
+export interface IOffer {
   id: string
-  is_available: boolean
+  image: string | null
   name: string
-  description?: string | undefined
-  stock: IMarketOfferStock
-  price: IMarketOfferPrices
+  description: string | null
+  stock: IOfferStock
+  price: IOfferPrices
   rating?: number
 }
 
-export interface IMarketOfferExtended extends IMarketOffer {
+export interface IOfferExtended extends IOffer {
   gallery: string[] | null
-  meta: IMarketOfferMetadata | null
+  meta: IOfferMetadata | null
 }
 
-export interface IMarketOfferMetadata {
+export interface IOfferMetadata {
   rating: number
+  sales: number
 }
 
-export interface IMarketOfferStock {
-  type: MarketOfferStockType
+export interface IOfferStock {
+  type: OfferStockType
   quantity: number | null
 }
 
-export enum MarketOfferStockType {
+export enum OfferStockType {
   Limited = 'in-stock',
   Out = 'out-stock',
   Income = 'income'
 }
 
-export interface IMarketOfferPrices {
+export interface IOfferPrices {
   sell: number
   inversion: number | null
   discount: number | null
