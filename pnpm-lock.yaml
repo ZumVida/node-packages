@@ -49,13 +49,24 @@ importers:
         specifier: ^8.26.1
         version: 8.26.1(eslint@9.22.0)(typescript@5.8.2)
 
+  packages/billing: {}
+
   packages/booking:
-    dependencies:
+    devDependencies:
       '@zumvida/common':
         specifier: workspace:^
         version: link:../common
 
   packages/common: {}
+
+  packages/market:
+    devDependencies:
+      '@zumvida/billing':
+        specifier: workspace:^
+        version: link:../billing
+      '@zumvida/common':
+        specifier: workspace:^
+        version: link:../common
 
 packages:
 

@@ -2,6 +2,7 @@
 export * from './services/users/service'
 export * from './services/users/types'
 /** Types */
+export * from './types/coords'
 export * from './types/pagination'
 
 /** Utils */
