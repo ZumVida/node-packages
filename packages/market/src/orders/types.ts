@@ -1,6 +1,6 @@
 import type { ICurrency, IPaymentMethod } from '@zumvida/billing'
 import type { ICoords, IUser } from '@zumvida/common'
-import type { IOffer } from '@zumvida/market/services/offers/types'
+import type { IOffer } from '@zumvida/market/offers/types'
 
 export interface IOrder {
   id: string

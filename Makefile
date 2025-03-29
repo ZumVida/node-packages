@@ -10,18 +10,23 @@ help:
 build: format
 	@pnpm run -r build
 
-
 .PHONY: format
 format:
 	@pnpm run -r lint:fix && pnpm run -r format
 
 .PHONY: unpublish
 unpublish:
-	@pnpm unpublish -r --force --registry https://dev.zumvida.com
+	@pnpm unpublish @zumvida/billing --force --registry https://dev.zumvida.com
+	@pnpm unpublish @zumvida/booking --force --registry https://dev.zumvida.com
+	@pnpm unpublish @zumvida/common --force --registry https://dev.zumvida.com
+	@pnpm unpublish @zumvida/market --force --registry https://dev.zumvida.com
 
 .PHONY: publish
 publish: build
-	@pnpm publish -r --no-git-checks --registry https://dev.zumvida.com
+	@pnpm publish ./packages/billing --no-git-checks --registry https://dev.zumvida.com
+	@pnpm publish ./packages/booking --no-git-checks --registry https://dev.zumvida.com
+	@pnpm publish ./packages/common --no-git-checks --registry https://dev.zumvida.com
+	@pnpm publish ./packages/market --no-git-checks --registry https://dev.zumvida.com
 
 .PHONY: fresh-publish
-fresh-publish: build unpublish publish
+fresh-publish: unpublish publish

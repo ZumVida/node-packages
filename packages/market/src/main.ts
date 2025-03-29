@@ -1,8 +1,8 @@
 /** Categories */
-export * from './services/categories/types'
+export * from './categories/types'
 /** Orders */
-export * from './services/orders/types'
+export * from './orders/types'
 /** Offers */
-export * from './services/offers/types'
+export * from './offers/types'
 /** Stores */
-export * from './services/stores/types'
+export * from './stores/types'

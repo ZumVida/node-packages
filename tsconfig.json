@@ -1,6 +1,6 @@
 {
   "include": [
-    "src/**/*"
+    "packages/**/*"
   ],
   // We don't need to transpile these directories
   "exclude": [
@@ -23,7 +23,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "src/*"
+        "packages/*"
       ]
     }
   }

@@ -31,6 +31,6 @@ export enum OfferStockType {
 
 export interface IOfferPrices {
   sell: number
-  inversion: number | null
-  discount: number | null
+  inversion: number | null | undefined
+  discount: number | null | undefined
 }
