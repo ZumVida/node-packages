@@ -6,3 +6,6 @@ export * from './orders/types'
 export * from './offers/types'
 /** Stores */
 export * from './stores/types'
+
+/** Faker */
+export * from './faker'
