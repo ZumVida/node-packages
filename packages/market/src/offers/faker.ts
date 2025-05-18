@@ -1,4 +1,3 @@
-import { OfferStockType } from './types'
 import type { IOffer } from './types'
 
 export default function (count: number = 10): IOffer[] {
@@ -13,11 +12,16 @@ export default function (count: number = 10): IOffer[] {
       price: {
         discount: 15 * i,
         sell: 17 * i,
-        inversion: 12 * i
+        inversion: 12 * i,
+        reseller: null
       },
-      stock: {
-        quantity: i * 2,
-        type: OfferStockType.Limited
+      stock: i * 2,
+      category: {
+        id: `cat_${i}`,
+        image: 'https://picsum.photos/128',
+        is_global: true,
+        name: `Category ${i}`,
+        slug: `cat-${i}`
       },
       rating: 4.5
     })
