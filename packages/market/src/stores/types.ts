@@ -1,9 +1,9 @@
 import type { IUser } from '@zumvida/common'
 
 export interface IStore {
-  id: string
+  readonly id: string
   name: string
-  slug: string
+  readonly slug: string
   image: string | null
   description: string | null
 }

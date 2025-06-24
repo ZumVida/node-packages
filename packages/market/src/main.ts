@@ -1,5 +1,7 @@
 /** Categories */
 export * from './categories/types'
+/** Customers */
+export * from './customers/types'
 /** Orders */
 export * from './orders/types'
 /** Offers */

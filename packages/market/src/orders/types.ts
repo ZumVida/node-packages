@@ -1,50 +1,59 @@
-import type { ICurrency, IPaymentMethod } from '@zumvida/billing'
-import type { ICoords, IUser } from '@zumvida/common'
-import type { IOffer } from '@zumvida/market/offers/types'
+import type { ICustomer, IOffer, IStore } from '../main'
 
 export interface IOrder {
-  id: string
-  customer: IUser
-  prices: IOrderPrice
-  payment: IOrderPayment
+  readonly id: string
+  status: OrderStatus
+  customer: ICustomer
+  store: IStore
+  items_price: number
   items: IOrderItem[]
+  delivery: IOrderDelivery
+  created_at: null | string
 }
 
-export interface IOrderPayment {
-  method: IPaymentMethod
-  currency: ICurrency
-  status: OrderPaymentStatus
-}
-
-export interface IOrderPrice {
-  offers: number
-  tax: number
-  delivery: number
-  discount: number
-  total: number
+export enum OrderStatus {
+  PENDING = 'pending',
+  PROCESSING = 'processing',
+  COMPLETED = 'completed',
+  CANCELED = 'canceled'
 }
 
 export interface IOrderItem {
   offer: IOffer
   quantity: number
   price: number
-  comments: string | null
 }
 
 export interface IOrderDelivery {
+  recipient: string
   address: string
-  coords: ICoords | null
+  phone: string
+  status: DeliveryStatus
+  notes: string | null
 }
 
-export enum OrderPaymentStatus {
-  Paid = 'paid',
-  Pending = 'pending',
-  Refunded = 'refunded'
-}
-
-export enum OrderStatus {
-  Pending = 'Pending',
+export enum DeliveryStatus {
   Completed = 'completed',
-  Canceled = 'canceled',
-  Confirmed = 'confirmed'
+  Cancelled = 'cancelled',
+  Failed = 'failed',
+  Pending = 'pending',
+  Delivering = 'delivering'
+}
+
+/**
+ * ------------------------------------------
+ *	Requests
+ * ------------------------------------------
+ */
+export interface IOrderCreate {
+  store_id: string
+  address: string
+  phone: string
+  recipient: string
+  items: IItemCreate[]
+}
+
+export interface IItemCreate {
+  offer_id: string
+  quantity: number
 }

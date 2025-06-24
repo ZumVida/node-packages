@@ -2,14 +2,14 @@
  * @interface IPaginatedData
  */
 export interface IPaginatedData<T> {
-  data: T[]
-  links: {
+  readonly data: T[]
+  readonly links: {
     first?: string | undefined
     last?: string | undefined
     prev?: string | undefined
     next?: string | undefined
   }
-  meta: {
+  readonly meta: {
     current_page?: number | undefined
     from?: number | undefined
     path?: string | undefined
@@ -27,7 +27,7 @@ export interface IPaginationParams {
 }
 
 export interface IApiWrapper<T> {
-  data: T
-  message?: string | undefined
-  error?: string | undefined
+  readonly data: T
+  readonly message?: string | undefined
+  readonly error?: string | undefined
 }
