@@ -1,13 +1,3 @@
-/** Categories */
-export * from './categories/types'
-/** Customers */
-export * from './customers/types'
-/** Orders */
-export * from './orders/types'
-/** Offers */
-export * from './offers/types'
-/** Stores */
-export * from './stores/types'
-
-/** Faker */
 export * from './faker'
+export * from './types'
+export * from './service'

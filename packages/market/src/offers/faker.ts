@@ -9,12 +9,8 @@ export default function (count: number = 10): IOffer[] {
       image: 'https://picsum.photos/128',
       description: `Offer ${i} description text for some informaion data`,
       name: `Offer ${i} name extensive`,
-      price: {
-        discount: 15 * i,
-        sell: 17 * i,
-        inversion: 12 * i,
-        reseller: null
-      },
+      price: i * 10,
+      slug: `slug-${i}`,
       stock: i * 2,
       category: {
         id: `cat_${i}`,
